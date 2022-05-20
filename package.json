@@ -1,0 +1,24 @@
+{
+  "name": "micro-qiankun-vue-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "all:install": "npm-run-all --serial install:*",
+    "install:main": "cd micro-app-main && yarn install",
+    "install:message": "cd micro-app-message && yarn install",
+    "install:order": "cd micro-app-order && yarn install",
+    "install:user": "cd micro-app-user && yarn install",
+    "all:serve": "npm-run-all --parallel serve:*",
+    "serve:main": "cd micro-app-main && npm run serve",
+    "serve:message": "cd micro-app-message && npm run serve",
+    "serve:order": "cd micro-app-order && npm run serve",
+    "serve:user": "cd micro-app-user && npm run serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

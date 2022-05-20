@@ -1,0 +1,8 @@
+node_modules/
+micro-app-*/node_modules/
+
+.vscode
+.vscode/
+.idea
+.idea/
+yarn-error.log
