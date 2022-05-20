@@ -1,3 +1,6 @@
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 import { registerMicroApps, addGlobalUncaughtErrorHandler, start } from 'qiankun'
 import log from '@/utils/log.js'
 // 子应用注册信息
@@ -11,12 +14,16 @@ import apps from './apps'
 registerMicroApps(apps, {
   // qiankun 生命周期钩子 - 加载前
   beforeLoad: (app) => {
+    NProgress.start()
+
     log.capsule('MicroAppMain', `beforeLoad，app name：${app.name}`)
     return Promise.resolve()
   },
 
   // qiankun 生命周期钩子 - 挂载后
   afterMount: (app) => {
+    NProgress.done()
+
     log.capsule('MicroAppMain', `afterMount，app name：${app.name}`)
     return Promise.resolve()
   }

@@ -11,6 +11,7 @@
     "chalk": "^5.0.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.8",
+    "nprogress": "^0.2.0",
     "prettier": "^2.6.2",
     "qiankun": "^2.7.0",
     "vue": "^2.6.11",
